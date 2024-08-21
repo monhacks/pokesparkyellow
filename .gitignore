@@ -56,4 +56,4 @@ replace.sh
 .lvimrc
 
 # extras is a submodule, don't include
-extras/
+rgbds/

@@ -244,11 +244,11 @@ INCLUDE "engine/menu/pc.asm"
 SECTION "bank06",ROMX,BANK[$06]
 
 INCLUDE "data/mapHeaders/celadoncity.asm"
-INCLUDE "data/mapObjects/CeladonCity.asm"
+INCLUDE "data/mapObjects/celadoncity.asm"
 CeladonCityBlocks: INCBIN "maps/CeladonCity.blk"
 
 INCLUDE "data/mapHeaders/pallettown.asm"
-INCLUDE "data/mapObjects/PalletTown.asm"
+INCLUDE "data/mapObjects/pallettown.asm"
 PalletTownBlocks: INCBIN "maps/PalletTown.blk"
 
 INCLUDE "data/mapHeaders/viridiancity.asm"

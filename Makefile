@@ -1,4 +1,4 @@
-PYTHON := python
+PYTHON := python2
 MD5 := md5sum -c --quiet
 
 2bpp     := $(PYTHON) gfx.py 2bpp
@@ -39,13 +39,13 @@ clean:
 
 %.asm: ;
 $(objs): %.o: %.asm $$(%_dep)
-	rgbasm -h -o $@ $*.asm
+	rgbds/rgbasm -h -o $@ $*.asm
 
 opts = -cjsv -k 01 -l 0x33 -m 0x1b -p 0 -r 03 -t "POKESPARKY"
 
 $(rom): $(objs)
-	rgblink -n $*.sym -o $@ $^
-	rgbfix $(opts) $@
+	rgbds/rgblink -n $*.sym -o $@ $^
+	rgbds/rgbfix $(opts) $@
 
 %.png:  ;
 %.2bpp: %.png  ; @$(2bpp) $<
